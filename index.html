@@ -16,27 +16,27 @@
         <button id="reset">Reset</button>
     </header>
     <div id="formBox">
-        <form action="/action_page.php" id="formContainer">
+        <form id="bookForm">
             <h2>New Book Information</h2>
                     
             <label for="Title">Title</label>
-            <input type="text" name="title" required>
+            <input type="text" name="title" id="title" required>
                             
             <label for="Author">Author</label>
-            <input type="text" name="author" required>
+            <input type="text" name="author" id="author" required>
            
             <label for="Total Pages">Pages</label>        
-            <input type="number" name="pages" required>
+            <input type="number" name="pages" id="pages" required>
                     
             <label for="Read">Read?</label>
-            <input type="checkbox" name="read" required>
+            <input type="checkbox" name="read" id="read">
     
             <input type="reset">
             <input id="addBook" type="submit" value="Add Book!">
         </form>
     </div>
     <div class="mainContent">
-        <table>
+        <table id="bookTable">
             <tr>
                 <th>Title</th>
                 <th>Author</th>

@@ -25,6 +25,48 @@ popUp.addEventListener('click', function() {
 
 //form submit button and store form info into array 
 let myLibrary = [];
+const form = document.getElementById('bookForm');
+form.addEventListener('submit', callbackFunction);
+
+function callbackFunction(event) {
+    event.preventDefault();
+    const myFormData = new FormData(event.target);
+
+    const formDataObj = {};
+    myFormData.forEach((value, key) => (formDataObj[key] = value));
+    myLibrary.push(formDataObj);
+
+    console.log(formDataObj);
+    console.log(myLibrary);
+    //loop through array and render results to table 
+   
+}
+
+
+
+
+
+//reset button
+
+/* 
+
+ for (let i=0; i<myLibrary.length; i++) {
+        let table = document.getElementById('bookTable');
+        let row = table.insertRow(1);
+        let title = row.insertCell(0);
+        let author = row.insertCell(1);
+        let pages = row.insertCell(2);
+        let read = row.insertCell(3);
+        title.innerHTML = document.getElementById("title").value;
+        author.innerHTML = document.getElementById("author").value;
+        pages.innerHTML = document.getElementById("pages").value;
+        read = document.getElementById("read");
+        
+    }
+function newBook() {
+    
+}
+
 
 function Book(title, author, pages, read) {
     this.title = form.title.value;
@@ -33,11 +75,8 @@ function Book(title, author, pages, read) {
     this.read = form.read.checked;
 }
 
-//loop through array and render results to table 
 
-//reset button
-
-
+*/
 
 
 
