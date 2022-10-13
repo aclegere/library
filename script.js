@@ -38,45 +38,46 @@ function callbackFunction(event) {
 
     console.log(formDataObj);
     console.log(myLibrary);
-    //loop through array and render results to table 
-   
-}
 
-
-
-
-
-//reset button
-
-/* 
-
- for (let i=0; i<myLibrary.length; i++) {
+    //whether or not book was read function
+    function bookRead() {
+        let itsBeenRead = document.getElementById('read')
+        if (itsBeenRead.checked){
+            return 'Read'
+        } else {
+            return 'Not Read'
+        }
+    }
+    
+    //get last book object from array and render results to table
+    function addNewBook(position){
         let table = document.getElementById('bookTable');
         let row = table.insertRow(1);
         let title = row.insertCell(0);
         let author = row.insertCell(1);
         let pages = row.insertCell(2);
         let read = row.insertCell(3);
+        //let readBtn = row.insertCell(4);
+        //let deleteBtn = row.insertCell(5);
         title.innerHTML = document.getElementById("title").value;
         author.innerHTML = document.getElementById("author").value;
         pages.innerHTML = document.getElementById("pages").value;
-        read = document.getElementById("read");
+        read.innerHTML = bookRead();
+        
+        //const rBtn = document.createElement('button');
+        //rBtn.innerHtml = "Change Read Status";
+        //readBtn.innerHTML = rBtn;
         
     }
-function newBook() {
     
-}
-
-
-function Book(title, author, pages, read) {
-    this.title = form.title.value;
-    this.author = form.author.value;
-    this.pages = form.pages.value;
-    this.read = form.read.checked;
-}
-
-
-*/
+    let lastPosition = myLibrary.length-1;
+    addNewBook(lastPosition);
+}    
+//reset button
+const resetBtn = document.querySelector('#reset')
+resetBtn.addEventListener('click', function(){
+     
+})
 
 
 
