@@ -48,6 +48,18 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+.btns, th {
+    text-align: center;
+}
+
+.btns:hover {
+    background-color: #ebf090;
+}
+
+.btns:active {
+    background-color: #36baad;
+}
+
 /*Pop up box*/
 #formBox{
     visibility:hidden;
@@ -66,6 +78,8 @@ tr:nth-child(even) {
     top: 0;
     z-index:99;
 }
+
+
 
 
 

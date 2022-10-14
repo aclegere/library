@@ -49,6 +49,8 @@ function callbackFunction(event) {
         }
     }
     
+    
+
     //get last book object from array and render results to table
     function addNewBook(position){
         let table = document.getElementById('bookTable');
@@ -57,16 +59,21 @@ function callbackFunction(event) {
         let author = row.insertCell(1);
         let pages = row.insertCell(2);
         let read = row.insertCell(3);
-        //let readBtn = row.insertCell(4);
-        //let deleteBtn = row.insertCell(5);
+        let readBtn = row.insertCell(4);
+        let editBtn = row.insertCell(5);
+        let deleteBtn = row.insertCell(6);
         title.innerHTML = document.getElementById("title").value;
         author.innerHTML = document.getElementById("author").value;
         pages.innerHTML = document.getElementById("pages").value;
         read.innerHTML = bookRead();
-        
-        //const rBtn = document.createElement('button');
-        //rBtn.innerHtml = "Change Read Status";
-        //readBtn.innerHTML = rBtn;
+
+        //adding images into cells and adding classes to them so I can add some css hover and click effects 
+        readBtn.appendChild(document.createElement('img')).src = 'change.png';
+        editBtn.appendChild(document.createElement('img')).src = 'edit.png';
+        deleteBtn.appendChild(document.createElement('img')).src = 'delete.png';
+        readBtn.className = 'btns'
+        editBtn.className = 'btns'
+        deleteBtn.className = 'btns'
         
     }
     
