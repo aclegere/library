@@ -17,6 +17,11 @@ header {
     padding: 10px;
 }
 
+.content{
+    display: grid;
+    grid-template-columns: 1fr 6fr
+}
+
 button {
     font-family: inherit;
     font-weight: 900;
@@ -26,11 +31,6 @@ button {
     border-color: black;
 }
 
-.mainContent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 /* Table styling*/
 table {
@@ -60,24 +60,26 @@ tr:nth-child(even) {
     background-color: #36baad;
 }
 
-/*Pop up box*/
-#formBox{
-    visibility:hidden;
-    position:absolute;
-    color:white;
-    z-index:100;
-    width: 200px;
-    height:200px;
-    padding:20px;
+/*form*/
+#bookForm{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 100vh;
+    padding-left: .5em;
 }
 
-.dimmer{
-    background: #000;
-    position: absolute;
-    opacity: .5;
-    top: 0;
-    z-index:99;
+#formBox{
+    border: solid 1px #dddddd;
 }
+
+
+
+
+
+
+
+
 
 
 

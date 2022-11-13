@@ -1,5 +1,6 @@
 "use strict";
 
+/*
 //Add new book pop up 
 const popUp = document.querySelector("#bookBtn");
 popUp.addEventListener('click', GetBook)
@@ -23,6 +24,7 @@ function GetBook() {
     formBox.style.left = window.innerWidth/2 - 100 + 'px';
     return false;
 }
+*/
 
 //form submit button and store form info into array 
 let myLibrary = [];
@@ -36,9 +38,6 @@ function callbackFunction(event) {
     const formDataObj = {};
     myFormData.forEach((value, key) => (formDataObj[key] = value));
     myLibrary.push(formDataObj);
-
-    //console.log(formDataObj);
-    //console.log(myLibrary);
 
     //whether or not book was read function
     function bookRead() {
